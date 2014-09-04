@@ -1239,8 +1239,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Sood (Q634K29GTG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Prashant Sood (Q634K29GTG)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1258,7 +1258,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "FC1832EA-7408-4AF8-BACD-C7D0051A98CF";
+				PROVISIONING_PROFILE = "7258cae0-af78-4091-a06d-71e961a45cca";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -1280,8 +1280,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Sood (Q634K29GTG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Prashant Sood (Q634K29GTG)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1292,7 +1292,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "FC1832EA-7408-4AF8-BACD-C7D0051A98CF";
+				PROVISIONING_PROFILE = "7258cae0-af78-4091-a06d-71e961a45cca";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
@@ -1303,8 +1303,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Sood (Q634K29GTG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Prashant Sood (Q634K29GTG)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1315,7 +1315,7 @@
 				INFOPLIST_FILE = "Styck/Styck-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FC1832EA-7408-4AF8-BACD-C7D0051A98CF";
+				PROVISIONING_PROFILE = "7258cae0-af78-4091-a06d-71e961a45cca";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1324,8 +1324,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taniya Chaudhary (X6F7VHG54U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Sood (Q634K29GTG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Prashant Sood (Q634K29GTG)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1336,7 +1336,7 @@
 				INFOPLIST_FILE = "Styck/Styck-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FC1832EA-7408-4AF8-BACD-C7D0051A98CF";
+				PROVISIONING_PROFILE = "7258cae0-af78-4091-a06d-71e961a45cca";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

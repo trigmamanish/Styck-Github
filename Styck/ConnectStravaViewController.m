@@ -26,7 +26,7 @@
     int x;
     NSString *tokenfromparse;
 }
-@synthesize btnnwOtlt,authorizeButton,statusLabel;
+@synthesize btnnwOtlt,authorizeButton,statusLabel,connectBigLbl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,7 +47,8 @@
 - (void)viewDidLoad
 {
     
-    
+    self.authorizeButton.hidden=YES;
+    self.connectBigLbl.hidden=YES;
     x=0;
     self.navigationController.navigationBarHidden=NO;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar.png"] forBarMetrics:UIBarMetricsDefault];
@@ -73,6 +74,9 @@
             
             NSLog(@"%@",name);
             NSLog(@"%@",email);
+            [self parseQuery];
+            
+            
         } else {
             // An error occurred, we need to handle the error
             // See: https://developers.facebook.com/docs/ios/errors
@@ -170,12 +174,38 @@
 //    
     
     
-    
-    
+   
     
     // Do any additional setup after loading the view.
 }
+-(void)parseQuery
+{
+    self.authorizeButton.hidden = YES;
+    self.statusLabel.text = @"Connecting to Strava...";
+    PFQuery *query= [PFUser query];
+    [query whereKey:@"email" equalTo:email];
+    [query whereKeyExists:@"strava_token"];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error){
+        if(!error)
+        {
+            
+            NSLog(@"%@",[object valueForKey:@"strava_token"]);
+            tokenfromparse=[object valueForKey:@"strava_token"];
+            [self checktoken];
+        }
+        else
+        {
+            
+            self.authorizeButton.hidden = NO;
+            self.statusLabel.text=@"";
+            self.connectBigLbl.hidden=NO;
+            
+        }
+        
+        
+    }];
 
+}
 
 -(void)checktoken
 {
@@ -190,7 +220,7 @@
     if ([previousToken length] > 0) {
         // check the user token is still ok by fetching user data
         self.authorizeButton.hidden = YES;
-        self.statusLabel.text = @"Checking access token is valid...";
+        self.statusLabel.text = @"Connecting to Strava...";
         
         [[FRDStravaClient sharedInstance] setAccessToken:previousToken];
         [[FRDStravaClient sharedInstance] fetchCurrentAthleteWithSuccess:^(StravaAthlete *athlete) {
@@ -266,21 +296,21 @@
 - (IBAction)StravaConnectBtn:(id)sender
 {
     
-    PFQuery *query= [PFUser query];
-    //[query whereKey:@"strava_token" equalTo:[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessToken"]];
-    [query whereKey:@"email" equalTo:email];
-    [query whereKeyExists:@"strava_token"];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error){
-        if(!error)
-        {
-            
-            NSLog(@"%@",[object valueForKey:@"strava_token"]);
-            tokenfromparse=[object valueForKey:@"strava_token"];
-            [self checktoken];
-        }
-        else
-        {
-        
+//    PFQuery *query= [PFUser query];
+//    //[query whereKey:@"strava_token" equalTo:[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessToken"]];
+//    [query whereKey:@"email" equalTo:email];
+//    [query whereKeyExists:@"strava_token"];
+//    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error){
+//        if(!error)
+//        {
+//            
+//            NSLog(@"%@",[object valueForKey:@"strava_token"]);
+//            tokenfromparse=[object valueForKey:@"strava_token"];
+//            [self checktoken];
+//        }
+//        else
+//        {
+    
             
             NSString *strURL = [NSString stringWithFormat:@"Styck://%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"CallbackDomain"]];
             
@@ -293,10 +323,10 @@
             
 
             
-        }
-        
-        
-    }];
+//        }
+//        
+//        
+//    }];
     
   }
 

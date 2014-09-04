@@ -100,6 +100,7 @@
                     <connections>
                         <outlet property="authorizeButton" destination="wsl-pY-Cmk" id="Ds8-dG-lUG"/>
                         <outlet property="btnnwOtlt" destination="GfN-FA-f1d" id="Hks-Fp-uYF"/>
+                        <outlet property="connectBigLbl" destination="aw9-B1-eZP" id="DjH-zW-1PR"/>
                         <outlet property="statusLabel" destination="Vbc-Gg-hQP" id="EKP-oU-VeT"/>
                         <segue destination="QJZ-Ma-mIx" kind="push" identifier="authorizeSuccessfulSegue" id="8wX-YS-RmB"/>
                     </connections>

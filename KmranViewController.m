@@ -235,7 +235,6 @@
     [fetchQuery whereKey:@"Activity_Month" equalTo:currentMonth];
     [fetchQuery whereKey:@"fbemail" equalTo:fbemail];
     
-    // [fetchQuery findObjectsInBackgroundWithBlock:^(NSArray *objects ,NSError *error]
     [fetchQuery findObjectsInBackgroundWithBlock:^(NSArray *objects ,NSError *error) {
         if (!error) {
             // Found UserStats
@@ -245,8 +244,11 @@
             //            // Save
             //            [StravauserStats saveInBackground];
             // parseLabel.hidden=NO;
-            NSLog(@"objects array%@",objects);
+           // NSLog(@"objects array%@",objects);
             NSUInteger arraycount= objects.count;
+            if (arraycount > 0) {
+                
+            
             int i;
             int x;
             NSString *summ;
@@ -294,6 +296,13 @@
 //            NSLog(@"sumofkm- %f",sm);
 //          //  totalKmLbl.text=[NSString stringWithFormat:@"Total KM ran this month- %.1f KM",sm];
 ////            [viewRefer addSubview:totalKmLbl];
+                
+            }
+            else
+            {
+
+                kmranLbl.text=@"No data found for this month!";
+            }
         }
         else
         {

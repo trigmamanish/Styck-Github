@@ -22,5 +22,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 @property (strong, nonatomic) IBOutlet UIButton *authorizeButton;
 @property (strong, nonatomic) IBOutlet UIButton *btnnwOtlt;
+@property (strong, nonatomic) IBOutlet UILabel *connectBigLbl;
 
 @end
